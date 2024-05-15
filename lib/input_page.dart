@@ -5,6 +5,11 @@ class InputPage extends StatefulWidget {
   _InputPageState createState() => _InputPageState();
 }
 
+const bottomHeightContainer = 80.0;
+const activeCardColor = Color(0xFF1D1E33);
+const bottomCardColor = Color(0xFFBE1555)
+
+
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
@@ -19,12 +24,12 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    Color(0xFF1D1E33),
+                    activeCardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    Color(0xFF1D1E33),
+                    activeCardColor,
                   ),
                 ),
               ],
@@ -32,7 +37,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              Color(0xFF1D1E33),
+              activeCardColor,
             ),
           ),
           Expanded(
@@ -40,16 +45,22 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    Color(0xFF1D1E33),
+                    activeCardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    Color(0xFF1D1E33),
+                    activeCardColor,
                   ),
                 )
               ],
             ),
+          ),
+          Container(
+            color:bottomCardColor,
+            margin: EdgeInsets.only(top: 10),
+            width: double.infinity,
+            height: bottomHeightContainer,
           ),
         ],
       ),
